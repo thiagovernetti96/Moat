@@ -1,0 +1,9 @@
+<% if current_user%>
+<h1>Bem Vindo a minha aplicação</h1>
+<%= link_to "Sign_out", destroy_user_session_path , method: :delete%>
+<%else%>
+<br>
+<%= link_to "Sign_up", new_user_registration_path %>
+<%= link_to "Sign_in", user_session_path%>
+</div>
+<%end%>
